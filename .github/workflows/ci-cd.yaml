@@ -33,4 +33,6 @@ jobs:
         echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
 
     - name: Deploy to k8s
-      run: kubectl apply -f k8s/
+      run: |
+        kubectl config use-context minikube
+        kubectl apply -f k8s/
