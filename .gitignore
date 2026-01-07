@@ -9,3 +9,5 @@ kubectl
 
 # OS
 .DS_Store
+
+k8s/actions-runner/
