@@ -34,5 +34,7 @@ jobs:
 
     - name: Deploy to k8s
       run: |
-        kubectl config use-context minikube
+        export KUBECONFIG=/home/veera/.kube/config
+        kubectl config get-contexts
+        kubectl get nodes
         kubectl apply -f k8s/
