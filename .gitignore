@@ -1,0 +1,11 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Kubernetes / local tools
+minikube-linux-amd64
+kubectl
+
+# OS
+.DS_Store
