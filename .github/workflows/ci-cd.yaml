@@ -33,4 +33,4 @@ jobs:
         echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
 
     - name: Deploy to k8s
-      run: kubectl apply --dry-run=client --validate=false -f k8s/
+      run: kubectl apply --dry-run=client --validate=false --kubeconfig=/dev/null  -f k8s/
