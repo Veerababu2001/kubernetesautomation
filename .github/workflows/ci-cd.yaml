@@ -28,4 +28,6 @@ jobs:
       uses: azure/setup-kubectl@v4
 
     - name: Deploy to k8s
-      run: kubectl apply -f k8s/
+      run: | 
+        kubectl apply -f k8s/
+        kubectl rollout restart deployment hello-app
